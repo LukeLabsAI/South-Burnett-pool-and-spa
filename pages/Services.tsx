@@ -9,9 +9,9 @@ const Services: React.FC = () => {
     <div className="pt-24 bg-white">
       {/* Header with Background */}
       <section className="relative py-32 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center z-0" 
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000')" }}
+        <div
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{ backgroundImage: "url('/services-hero.jpg')" }}
         >
           <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
         </div>
@@ -29,8 +29,8 @@ const Services: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {SERVICES.map((service) => (
-              <div 
-                key={service.id} 
+              <div
+                key={service.id}
                 className="group p-10 rounded-[3rem] bg-white border-2 border-slate-50 hover:border-blue-100 transition-all duration-300 hover:shadow-2xl"
               >
                 <div className="bg-blue-50 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-800 transition-all duration-300">
@@ -56,28 +56,27 @@ const Services: React.FC = () => {
               Reliable, affordable, and local. Choose a plan that fits your lifestyle.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {PRICING_TIERS.map((tier) => (
-              <div 
-                key={tier.id} 
-                className={`group relative flex flex-col p-12 rounded-[3.5rem] bg-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(30,58,138,0.3)] ${
-                  tier.isPopular ? 'ring-4 ring-blue-800 scale-105 z-10' : 'opacity-90'
-                }`}
+              <div
+                key={tier.id}
+                className={`group relative flex flex-col p-12 rounded-[3.5rem] bg-white transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(30,58,138,0.3)] ${tier.isPopular ? 'ring-4 ring-blue-800 scale-105 z-10' : 'opacity-90'
+                  }`}
               >
                 {tier.isPopular && (
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-800 text-white px-8 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-xl">
                     Most Popular
                   </div>
                 )}
-                
+
                 <div className="mb-10">
                   <h3 className="text-2xl font-black text-slate-900 mb-2">{tier.name}</h3>
                   <div className="flex items-baseline gap-1">
                     <span className="text-5xl font-black text-slate-900">{tier.price}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-6 mb-12 flex-grow">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-4">
@@ -88,21 +87,20 @@ const Services: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Link 
-                  to="/contact" 
-                  className={`w-full py-5 rounded-2xl font-black text-center text-lg transition-all ${
-                    tier.isPopular 
-                      ? 'bg-blue-800 text-white hover:bg-blue-900 shadow-xl shadow-blue-800/20' 
+
+                <Link
+                  to="/contact"
+                  className={`w-full py-5 rounded-2xl font-black text-center text-lg transition-all ${tier.isPopular
+                      ? 'bg-blue-800 text-white hover:bg-blue-900 shadow-xl shadow-blue-800/20'
                       : 'bg-slate-900 text-white hover:bg-slate-800'
-                  }`}
+                    }`}
                 >
                   Book Now
                 </Link>
               </div>
             ))}
           </div>
-          
+
           <div className="mt-16 bg-white/5 border border-white/10 p-10 rounded-[3rem] text-center max-w-4xl mx-auto">
             <p className="text-lg text-slate-300 italic">
               * Final pricing may vary based on pool size and location. We provide no-obligation quotes after an initial site visit.
@@ -118,7 +116,7 @@ const Services: React.FC = () => {
             <HelpCircle className="w-16 h-16 text-blue-800 mx-auto mb-6" />
             <h2 className="text-4xl font-black text-slate-900">Pool Care FAQs</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {/* Column 1 */}
             <div className="space-y-8">

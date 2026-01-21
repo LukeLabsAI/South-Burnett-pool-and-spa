@@ -46,7 +46,7 @@ export const PRICING_TIERS: PricingTier[] = [
   {
     id: 'basic',
     name: 'Standard Clean',
-    price: 'From $85',
+    price: '??',
     features: [
       'Chemical test and balance',
       'Skimmer and pump basket clean',
@@ -58,7 +58,7 @@ export const PRICING_TIERS: PricingTier[] = [
   {
     id: 'standard',
     name: 'Premium Care',
-    price: 'From $110',
+    price: '??',
     isPopular: true,
     features: [
       'Everything in Standard',
@@ -72,7 +72,7 @@ export const PRICING_TIERS: PricingTier[] = [
   {
     id: 'premium',
     name: 'Total Managed',
-    price: '???',
+    price: '??',
     features: [
       'Fortnightly premium visits',
       'Full equipment optimization',
